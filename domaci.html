@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+    
+    <title>Domaci rad</title>
+    <h1 style="text-align: center;"> Guess a number</h1>
+</head>
+
+
+<style>
+body {
+    background-image: url("slika.jpg");
+
+   }
+</style>
+<body>
+      <div class="card mx-auto" style="text-align: justify;">
+        <div class="card-body">
+          <h5 class="card-title">Guess a number</h5>
+          <h6 class="card-subtitle mb-2 text-muted">
+            Enter your guess in range from 0 to 100.
+            Change your guess.
+            The computer will tell you how many guesses you had.</h6>
+
+            <h5 style="text-align: center;"> Numbers of try:<span  id="guessNumber">0 </span ></h5>
+            <form id="myForm">
+              <label class="form-label" for="typeNumber">Enter a number:</label>
+              <input type="number" id="broj" class="form-control" />
+              <br>
+            <button type="button"  onClick="PogodiBroj()" class="btn btn-primary">Try</button>
+            <button type="button"  onClick="ResetFunction()" class="btn btn-secondary" style="margin-left: 250px;">Reset</button>
+            </form>
+        </div>
+      </div>
+
+      
+
+     
+<div class="modal" tabindex="-1"  id="winModal"  >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"  >
+        <h5 class="modal-title">You Win!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"  aria-label="Close alert"  data-close></button>
+      </div>
+      <div class="modal-body">
+       
+        <div class="alert alert-success">
+          <strong>Success!</strong> 
+          <p>Congratulations, you hit the imaginary number ! :)</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1"  id="littleModal"  >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"  >
+        <h5 class="modal-title">You lose!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"  aria-label="Close alert"  data-close></button>
+      </div>
+      <div class="modal-body">
+       
+        <div class="alert alert-info">
+          <strong>Info!</strong> 
+          <p>Hmmm, try again ! :)</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1"  id="littleModalRange"  >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"  >
+        <h5 class="modal-title">You lose!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"  aria-label="Close alert"  data-close></button>
+      </div>
+      <div class="modal-body">
+       
+        <div class="alert alert-danger">
+          <strong>Alert</strong> 
+          <p>Please enter the number in range from 0 to 100!:)</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+</body>
+ <script src="script.js"></script>
+</html>
+
+
